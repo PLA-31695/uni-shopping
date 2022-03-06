@@ -1,5 +1,7 @@
 <template>
-	<view class="scroll-container">
+	<view>
+		<my-search @click="goSearch"></my-search>
+		<view class="scroll-container">
 		<scroll-view scroll-y="true" class="scroll-left" :style="{height: wh + 'px'}">
 
 			<view :class="['left-scroll-item' ,index === active?'active':'']" 
@@ -23,6 +25,7 @@
 		</scroll-view>
 
 	</view>
+	</view>
 </template>
 
 <script>
@@ -38,7 +41,7 @@
 		},
 		onLoad(){
 			 const systemInfo = uni.getSystemInfoSync();
-			 this.wh = systemInfo.windowHeight
+			 this.wh = systemInfo.windowHeight - 100
 			 this.getCateList()
 		},
 		methods:{
@@ -67,9 +70,13 @@
 				uni.navigateTo({
 					url:'/subpkg/goods_detail/goods_detail?cid=' + item1.cat_id
 				})
+			},
+			
+			goSearch(){
+				uni.navigateTo({
+					url:'../../subpkg/search/search'
+				})
 			}
-			
-			
 		}
 	}
 </script>
