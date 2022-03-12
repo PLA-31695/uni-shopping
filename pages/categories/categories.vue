@@ -72,7 +72,7 @@
 				})
 			},
 			
-			goSearch(){
+			goSearch(){ 
 				uni.navigateTo({
 					url:'../../subpkg/search/search'
 				})
