@@ -1,8 +1,8 @@
 <template>
 	<view class="">
-		<block v-for="(item,index) in goodsList" :key="index">
+		<view v-for="(item,index) in goodsList" :key="index"  @click="gotoGoodsDetail(item.goods_id)">
 			<myGoods :item= "item"></myGoods>
-		</block>
+		</view>
 	</view>
 	
 </template>
@@ -32,6 +32,11 @@
 			this.getGoodsList()
 		},
 		methods: {
+			gotoGoodsDetail(id){
+				uni.navigateTo({
+					url:'../../subpkg/goods_detail/goods_detail?goods_id=' + id
+				})
+			},
 			async getGoodsList(){
 				this.isloading  = true
 				const {data:res} = await uni.$http.get("/api/public/v1/goods/search",this.queryObj)
