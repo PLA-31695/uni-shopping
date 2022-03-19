@@ -1,5 +1,5 @@
 {
-    "name" : "uni-shop",
+    "name" : "jhg的小程序",
     "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
@@ -53,7 +53,7 @@
         "appid" : "wx8a5733f7b0ce74d4",
         "setting" : {
             "urlCheck" : false,
-			"checkSiteMap":false
+            "checkSiteMap" : false
         },
         "usingComponents" : true
     },

@@ -82,7 +82,7 @@
 				"pagePath":"pages/categories/categories",
 				"text":"分类",
 				"iconPath":"static/tabbar/category.png",
-				"selectedIconPath":""
+				"selectedIconPath":"static/tabbar/cartsClick.png"
 			},
 			{
 				"pagePath":"pages/carts/carts",
@@ -93,7 +93,8 @@
 			{
 				"pagePath":"pages/profile/profile",
 				"text":"我的",
-				"iconPath":"static/tabbar/profile.png"
+				"iconPath":"static/tabbar/profile.png",
+				"selectedIconPath":"static/tabbar/cartsClick.png"
 			}
 		]
 	}

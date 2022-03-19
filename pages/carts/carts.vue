@@ -6,11 +6,11 @@
 				<uni-icons type="shop" size="18"></uni-icons>
 				<text class="cart-title-text">购物车</text>
 			</view>
-			 
+			  
 			<uni-swipe-action>
 				<block v-for="(item,index) in cart" :key="index">
 					<uni-swipe-action-item :right-options="options" @click="swipeItemClickHandler(item)">
-						<myGoods :item="item" :isShow="true" @radio-change="radioClickHandler" :boxShow="true"
+						<myGoods :item="item" :isShow="true" @radio-change="changeCartStatus" :boxShow="true"
 							@count-change="countClickHandler"></myGoods>
 					</uni-swipe-action-item>
 				</block>
@@ -61,10 +61,10 @@
 		},
 		methods: {
 			...mapMutations("m_cart", ['changeCartStatus', 'changeCartCount','delCart']),
-			radioClickHandler(e) {
-				console.log(e)
-				this.changeCartStatus(e)
-			},
+			// radioClickHandler(e) {
+			// 	console.log(e)
+			// 	this.changeCartStatus(e)
+			// },
 			countClickHandler(e) {
 				console.log(e)
 				this.changeCartCount(e)
